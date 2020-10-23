@@ -1,60 +1,94 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <record model="ir.ui.view" id="product_form_view">
+            <field name="name">product.form</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <form string="Product Form">
+                    <sheet>
+                        <widget name="web_ribbon" title="Available"
+                                attrs="{'invisible': [('availablity', '==', False)]}"/>
+                        <widget name="web_ribbon" title="Not Available"
+                                attrs="{'invisible': [('availablity', '==', True)]}" bg_color="bg-danger"/>
+                        <field name="availablity" invisible="1" force_save="1"/>
 
-<!--    <record model="ir.ui.view" id="barcode_article_information.list">-->
-<!--      <field name="name">barcode_article_information list</field>-->
-<!--      <field name="model">barcode_article_information.barcode_article_information</field>-->
-<!--      <field name="arch" type="xml">-->
-<!--        <tree>-->
-<!--          <field name="name"/>-->
-<!--          <field name="value"/>-->
-<!--          <field name="value2"/>-->
-<!--        </tree>-->
-<!--      </field>-->
-<!--    </record>-->
+                        <group>
+                            <group string="Article informations">
+                                <field name="name"/>
+                                <field name="description" groups="barcode_article_information.group_clients"/>
+                                <field name="categ_id" groups="barcode_article_information.group_vendeurs"/>
+                                <field name="list_price" class="oe_inline" widget="monetary"
+                                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                                <field name="standard_price" class="oe_inline"
+                                       widget="monetary"
+                                       options="{'currency_field': 'currency_id', 'field_digits': True}"
+                                       groups="barcode_article_information.group_vendeurs"
+                                />
+                                <field name="qty_available" groups="barcode_article_information.group_vendeurs"/>
+                                <field name="uom_name" groups="barcode_article_information.group_vendeurs"/>
+                                <field name="property_stock_inventory"
+                                       groups="barcode_article_information.group_vendeurs"/>
+                                <field name="location_id"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="cost_currency_id" invisible="1"/>
+                                <field name="product_variant_id" invisible="1"/>
+                            </group>
+                        </group>
+                        <label for="stock_quant_ids"/>
+                        <field name="stock_quant_ids" domain="[('on_hand','=',True)]">
+                            <tree>
+                                <field name="location_id"/>
+                                <field name="quantity"/>
+                                <field name="on_hand" invisible="1"/>
+                            </tree>
+                        </field>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
 
-<!--    &lt;!&ndash; actions opening views on models &ndash;&gt;-->
+        <!--    &lt;!&ndash; actions opening views on models &ndash;&gt;-->
 
-<!--    <record model="ir.actions.act_window" id="barcode_article_information.action_window">-->
-<!--      <field name="name">barcode_article_information window</field>-->
-<!--      <field name="res_model">barcode_article_information.barcode_article_information</field>-->
-<!--      <field name="view_mode">tree,form</field>-->
-<!--    </record>-->
-
-
-<!--    &lt;!&ndash; server action to the one above &ndash;&gt;-->
-
-<!--    <record model="ir.actions.server" id="barcode_article_information.action_server">-->
-<!--      <field name="name">barcode_article_information server</field>-->
-<!--      <field name="model_id" ref="model_barcode_article_information_barcode_article_information"/>-->
-<!--      <field name="state">code</field>-->
-<!--      <field name="code">-->
-<!--        action = {-->
-<!--          "type": "ir.actions.act_window",-->
-<!--          "view_mode": "tree,form",-->
-<!--          "res_model": model._name,-->
-<!--        }-->
-<!--      </field>-->
-<!--    </record>-->
+        <!--    <record model="ir.actions.act_window" id="barcode_article_information.action_window">-->
+        <!--      <field name="name">barcode_article_information window</field>-->
+        <!--      <field name="res_model">barcode_article_information.barcode_article_information</field>-->
+        <!--      <field name="view_mode">tree,form</field>-->
+        <!--    </record>-->
 
 
-<!--    &lt;!&ndash; Top menu item &ndash;&gt;-->
+        <!--    &lt;!&ndash; server action to the one above &ndash;&gt;-->
 
-<!--    <menuitem name="barcode_article_information" id="barcode_article_information.menu_root"/>-->
+        <!--    <record model="ir.actions.server" id="barcode_article_information.action_server">-->
+        <!--      <field name="name">barcode_article_information server</field>-->
+        <!--      <field name="model_id" ref="model_barcode_article_information_barcode_article_information"/>-->
+        <!--      <field name="state">code</field>-->
+        <!--      <field name="code">-->
+        <!--        action = {-->
+        <!--          "type": "ir.actions.act_window",-->
+        <!--          "view_mode": "tree,form",-->
+        <!--          "res_model": model._name,-->
+        <!--        }-->
+        <!--      </field>-->
+        <!--    </record>-->
 
-<!--    &lt;!&ndash; menu categories &ndash;&gt;-->
 
-<!--    <menuitem name="Menu 1" id="barcode_article_information.menu_1" parent="barcode_article_information.menu_root"/>-->
-<!--    <menuitem name="Menu 2" id="barcode_article_information.menu_2" parent="barcode_article_information.menu_root"/>-->
+        <!--    &lt;!&ndash; Top menu item &ndash;&gt;-->
 
-<!--    &lt;!&ndash; actions &ndash;&gt;-->
+        <!--    <menuitem name="barcode_article_information" id="barcode_article_information.menu_root"/>-->
 
-<!--    <menuitem name="List" id="barcode_article_information.menu_1_list" parent="barcode_article_information.menu_1"-->
-<!--              action="barcode_article_information.action_window"/>-->
-<!--    <menuitem name="Server to list" id="barcode_article_information" parent="barcode_article_information.menu_2"-->
-<!--              action="barcode_article_information.action_server"/>-->
+        <!--    &lt;!&ndash; menu categories &ndash;&gt;-->
 
-  </data>
+        <!--    <menuitem name="Menu 1" id="barcode_article_information.menu_1" parent="barcode_article_information.menu_root"/>-->
+        <!--    <menuitem name="Menu 2" id="barcode_article_information.menu_2" parent="barcode_article_information.menu_root"/>-->
+
+        <!--    &lt;!&ndash; actions &ndash;&gt;-->
+
+        <!--    <menuitem name="List" id="barcode_article_information.menu_1_list" parent="barcode_article_information.menu_1"-->
+        <!--              action="barcode_article_information.action_window"/>-->
+        <!--    <menuitem name="Server to list" id="barcode_article_information" parent="barcode_article_information.menu_2"-->
+        <!--              action="barcode_article_information.action_server"/>-->
+
+    </data>
 </odoo>

@@ -1,18 +1,14 @@
-# #-*- coding: utf-8 -*-
-#
-# from odoo import models, fields, api
-#
-#
-# class barcode_article_information(models.Model):
-#     _name = 'barcode_article_information.barcode_article_information'
-#     _description = 'barcode_article_information.barcode_article_information'
-#
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+#-*- coding: utf-8 -*-
+from odoo import fields, models, api
+
+class Product(models.Model):
+    _inherit = 'product.product'
+    availablity = fields.Boolean(compute='compute_availablity', string=" Product Availablity")
+
+    @api.depends('qty_available')
+    def compute_availablity(self):
+        quantity = self.qty_available
+        if (quantity <= 0):
+            self.availablity = False
+        else:
+            self.availablity = True

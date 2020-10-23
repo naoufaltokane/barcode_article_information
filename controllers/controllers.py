@@ -35,7 +35,8 @@ class StockBarcodeController(StockBarcodeController):
     def try_show_product(self, barcode):
         corresponding_product = request.env['product.product'].search([('barcode', '=', barcode),], limit=1)
         if corresponding_product:
-            view_id = request.env.ref('product.product_template_form_view').id
+            print(corresponding_product.availablity)
+            view_id = request.env.ref('barcode_article_information.product_form_view').id
             return {
                 'action': {
                     'name': _('open product form'),
