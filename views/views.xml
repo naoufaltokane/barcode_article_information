@@ -26,20 +26,17 @@
                                 />
                                 <field name="qty_available" groups="barcode_article_information.group_vendeurs"/>
                                 <field name="uom_name" groups="barcode_article_information.group_vendeurs"/>
-                                <field name="property_stock_inventory"
-                                       groups="barcode_article_information.group_vendeurs"/>
-                                <field name="location_id"/>
                                 <field name="currency_id" invisible="1"/>
                                 <field name="cost_currency_id" invisible="1"/>
                                 <field name="product_variant_id" invisible="1"/>
                             </group>
                         </group>
                         <label for="stock_quant_ids"/>
-                        <field name="stock_quant_ids" domain="[('on_hand','=',True)]">
+                        <field name="stock_quant_ids" groups="barcode_article_information.group_vendeurs">
                             <tree>
-                                <field name="location_id"/>
-                                <field name="quantity"/>
-                                <field name="on_hand" invisible="1"/>
+                                <field name="quantity" invisible="1"/>
+                                <field name="location_id" attrs="{'invisible': [('quantity','&lt;',0)]}"/>
+                                <field name="quantity" attrs="{'invisible': [('quantity','&lt;',0)]}"/>
                             </tree>
                         </field>
 
