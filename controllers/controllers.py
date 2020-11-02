@@ -8,7 +8,7 @@ class StockBarcodeController(StockBarcodeController):
     @http.route('/stock_barcode/scan_from_main_menu', type='json', auth='user')
     def main_menu(self, barcode, **kw):
         """ Receive a barcode scanned from the main menu and return the appropriate
-            action (open an existing / new picking) or warning.
+            action (open an existing / new picking) or warning...
         """
         ret_open_picking = self.try_open_picking(barcode)
         if ret_open_picking:

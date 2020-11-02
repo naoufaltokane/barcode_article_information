@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98425516-afa2-42ac-aada-cf07c9a06c64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/barcode_article_information.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/barcode_article_information.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/views.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,78 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../odoo-server/odoo-bin" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Python.odoo12-bin">
+    <configuration name="odoo12-bin" type="PythonConfigurationType" factoryName="Python">
+      <module name="barcode_article_information" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../odoo-server" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../odoo12/odoo-server/odoo-bin" />
+      <option name="PARAMETERS" value="-c /etc/odoo12-server.conf -d db_12" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="odoo13-bin" type="PythonConfigurationType" factoryName="Python">
+      <module name="barcode_article_information" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../odoo-server" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../odoo-server/odoo-bin" />
+      <option name="PARAMETERS" value="-c /etc/odoo13-server.conf -d db_13" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="odoo14-bin" type="PythonConfigurationType" factoryName="Python">
+      <module name="barcode_article_information" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../odoo-server" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../odoo14/odoo-server/odoo-bin" />
+      <option name="PARAMETERS" value="-c /etc/odoo14-server.conf -d db_14" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.odoo12-bin" />
+      <item itemvalue="Python.odoo13-bin" />
+      <item itemvalue="Python.odoo14-bin" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,9 +107,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1603192300614">
+    <state x="454" y="211" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604328826908">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="454" y="211" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604328826908" />
+    <state x="705" y="355" width="572" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604323896596">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="705" y="355" width="572" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1604323896596" />
+    <state x="779" y="324" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604323501124">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="324" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1604323501124" />
+    <state width="1825" height="175" key="GridCell.Tab.0.bottom" timestamp="1604328829662">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1825" height="175" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1604328829662" />
+    <state width="1825" height="175" key="GridCell.Tab.0.center" timestamp="1604328829662">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1825" height="175" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1604328829662" />
+    <state width="1825" height="175" key="GridCell.Tab.0.left" timestamp="1604328829662">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1825" height="175" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1604328829662" />
+    <state width="1825" height="175" key="GridCell.Tab.0.right" timestamp="1604328829662">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1825" height="175" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1604328829662" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1604330693776">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.312.1366.768@72.27.1848.1053" timestamp="1603192300614" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1604330693776" />
+    <state x="702" y="235" width="578" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604323693396">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="702" y="235" width="578" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1604323693396" />
   </component>
 </project>
